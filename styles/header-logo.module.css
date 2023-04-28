@@ -1,0 +1,69 @@
+/* svg path .line {
+    stroke-dashoffset: 210;
+    stroke-dasharray: 210;
+    animation: draw 10s forwards;
+}
+
+svg g .group {
+    fill-opacity: 0;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+} */
+
+svg .logo {
+  height: 140px;
+  width: 200px;
+}
+
+svg path .line {
+  stroke-dasharray: 210;
+  stroke-dashoffset: 210;
+  animation: dash 1s forwards;
+}
+
+svg g .group {
+  animation: fill-in 1s 3s forwards;
+  fill-opacity: 0;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill-in {
+  to {
+    fill-opacity: 1;
+  }
+}
+
+/* .path {
+    stroke-dasharray: 100;
+    animation: dash 5s linear alternate infinite;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 1000;
+    }
+} */
+
+/* .path {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: dash 5s linear alternate infinite;
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 1;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+} */

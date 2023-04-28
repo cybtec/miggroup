@@ -1,0 +1,125 @@
+::-webkit-scrollbar {
+  height: 12px;
+  width: 5px;
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #838282;
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner {
+  background: #cacaca;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.perspective {
+  perspective: 500px;
+}
+
+.text-xxs {
+  font-size: 0.5rem; /* 12px */
+  line-height: 1rem; /* 16px */
+}
+.shadow-light {
+  box-shadow: 4px 2px 124px 31px rgba(255, 255, 255, 0.84);
+  -webkit-box-shadow: 4px 2px 124px 31px rgba(255, 255, 255, 0.84);
+  -moz-box-shadow: 4px 2px 124px 31px rgba(255, 255, 255, 0.84);
+}
+
+.body {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  background-image: url("/logo/background.jpg");
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+}
+
+.logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+}
+
+.footer {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 1024px) {
+  .logos {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    /* Scroll in the phone view with right white margin screen ; change padding to margin */
+    /* padding: 20px; */
+    padding-bottom: 30px;
+    width: 100%;
+    scale: 1;
+    transition: scale 0.1s linear;
+  }
+  .body {
+    display: flex;
+    height: 100%;
+    background-image: url("/logo/background-vertical.png");
+    overflow: visible;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    background-size: 100%;
+  }
+  .footer {
+    width: 100%;
+  }
+}
+
+.progressbar {
+  position: relative;
+  overflow: hidden;
+  width: 5vw;
+  height: 5px;
+  border-radius: 5px;
+  background-color: transparent;
+}
+.fixWidth {
+  width: 90px;
+}
+.progressCircle {
+  position: absolute;
+  left: 95%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #eee;
+  text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
+}
+
+.progressLogo {
+  position: absolute;
+  left: 100%;
+  top: -80px;
+  transform: translate(-50%, -50%);
+  color: #eee;
+  text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
+}
+.logoDown {
+  top: 80px;
+}
+@media screen and (max-width: 1300px) and (min-width: 1024px) {
+  .logos {
+    scale: 0.8;
+  }
+}
+.invert {
+  filter: invert(1);
+}
